@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CayberMods</title>
+    <title>CayberMods - Developer & Pentester</title>
     <link rel="icon" type="image/png" href="https://i.ibb.co.com/Rk30hyF5/IMG-20250222-210524.webp">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -11,71 +10,89 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
+        }body {
+        font-family: 'Poppins', sans-serif;
+        background: url('https://i.ibb.co.com/B5FG4gd8/14a552aa2864b45246c12632413f32fd.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: url('https://i.ibb.co.com/B5FG4gd8/14a552aa2864b45246c12632413f32fd.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .intro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        font-size: 30px;
+        font-weight: bold;
+        opacity: 1;
+        transition: opacity 2s ease-in-out;
+        z-index: 10;
+    }
 
-        .container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 400px;
-            width: 90%;
-            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
-            border: 2px solid red;
-            transition: 0.3s;
-            animation: floating 3s infinite ease-in-out;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+    .container {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
+        border: 2px solid red;
+        transition: 0.3s;
+        animation: fadeIn 2s ease-in-out forwards, floating 3s infinite ease-in-out;
+        opacity: 0;
+    }
 
-        .container:hover {
-            box-shadow: 0px 0px 30px rgba(255, 0, 0, 1);
-        }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
 
-        .profile-img {
-            width: 100px;
-            border-radius: 50%;
-            border: 3px solid red;
-            padding: 5px;
-            margin-bottom: 15px;
-        }
+    @keyframes floating {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
 
-        h1 {
-            font-size: 26px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
+    .profile-img {
+        width: 100px;
+        border-radius: 50%;
+        border: 3px solid red;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
 
-        .link {
-            display: block;
-            background-color: #1a1a1a;
-            padding: 12px;
-            margin: 10px 0;
-            text-decoration: none;
-            color: white;
-            border-radius: 10px;
-            font-weight: 400;
-            border: 2px solid red;
-            transition: 0.3s ease-in-out;
-            position: relative;
-            overflow: hidden;
-        }
+    h1 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
 
-        .link::before {
+    .link {
+        display: block;
+        background-color: #1a1a1a;
+        padding: 12px;
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+        border-radius: 10px;
+        font-weight: 400;
+        border: 2px solid red;
+        transition: 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+    }
+
+     .link::before {
             content: '';
             position: absolute;
             top: 50%;
@@ -98,25 +115,32 @@
             box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
         }
 
-        .credit {
-            margin-top: 20px;
-            font-size: 12px;
-            color: white;
-            opacity: 0.8;
-        }
-    </style>
+    .credit {
+        margin-top: 20px;
+        font-size: 12px;
+        color: white;
+        opacity: 0.8;
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <img src="https://i.ibb.co.com/Rk30hyF5/IMG-20250222-210524.webp" alt="Profile" class="profile-img">
-        <h1>CayberMods</h1>
-        <a href="https://github.com/CayberMods" class="link">GitHub</a>
-        <a href="https://youtube.com/@CAYBERMODS" class="link">YouTube</a>
-        <a href="https://tiktok.com/@caybermods" class="link">TikTok</a>
-        <a href="https://instagram.com/@caybermods" class="link">Instagram</a>
-        <a href="https://caybermods.blogspot.com" class="link">Website</a>
-        <a href=" https://wa.me/qr/Y2BWLNVF73GCO1" class="link">WhatsApp</a>
-        <p class="credit">Credit by CayberMods</p>
-    </div>
+    <div class="intro">CAYBERMODS</div><div class="container">
+    <img src="https://i.ibb.co.com/Rk30hyF5/IMG-20250222-210524.webp" alt="Profile" class="profile-img">
+    <h1>CayberMods</h1>
+    <a href="https://github.com/CayberMods" class="link">GitHub</a>
+    <a href="https://youtube.com/@CAYBERMODS" class="link">YouTube</a>
+    <a href="https://tiktok.com/@caybermods" class="link">TikTok</a>
+    <a href="https://instagram.com/@caybermods" class="link">Instagram</a>
+    <a href="https://caybermods.blogspot.com" class="link">Website</a>
+    <a href="https://wa.me/qr/Y2BWLNVF73GCO1" class="link">WhatsApp</a>
+    <p class="credit">Credit by CayberMods</p>
+</div>
+<script>
+    setTimeout(() => {
+        document.querySelector('.intro').style.opacity = '0';
+        setTimeout(() => { document.querySelector('.intro').style.display = 'none'; }, 2000);
+        document.querySelector('.container').style.opacity = '1';
+    }, 2000);
+</script>
 </body>
 </html>
